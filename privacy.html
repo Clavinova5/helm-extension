@@ -35,7 +35,7 @@
     <div class="mb-12">
       <p class="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">Legal</p>
       <h1 class="text-4xl font-bold text-white mb-4">Privacy Policy</h1>
-      <p class="text-slate-500 text-sm">Last updated: May 20, 2026</p>
+      <p class="text-slate-500 text-sm">Last updated: June 11, 2026</p>
     </div>
 
     <div class="prose prose-invert prose-slate max-w-none space-y-10 text-[15px] leading-relaxed">
@@ -43,7 +43,7 @@
       <section>
         <h2 class="text-xl font-semibold text-white mb-3">1. Introduction</h2>
         <p class="text-slate-400">
-          Welcome to Helm ("we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains what information we collect, how we use it, and what rights you have in relation to it when you use the Helm Chrome Extension and its associated website (collectively, the "Service").
+          Welcome to Helm ("we," "our," or "us"). We take your privacy seriously and are committed to protecting your personal information and your right to privacy. This Privacy Policy explains what information we collect, how we use it, how we store it, and what rights you have in relation to it when you use the Helm Chrome Extension and its associated website (collectively, the "Service").
         </p>
         <p class="text-slate-400 mt-3">
           If you have any questions or concerns about this policy, please contact us at <a href="mailto:clavinovacs@gmail.com" class="text-sky-400 hover:underline">clavinovacs@gmail.com</a>.
@@ -51,52 +51,70 @@
       </section>
 
       <section>
-        <h2 class="text-xl font-semibold text-white mb-3">2. Information We Collect</h2>
+        <h2 class="text-xl font-semibold text-white mb-3">2. Data We Collect and How We Use It</h2>
 
-        <h3 class="text-base font-semibold text-slate-200 mb-2 mt-5">2.1 Information You Provide Directly</h3>
-        <ul class="list-disc list-outside pl-5 space-y-2 text-slate-400">
-          <li>API keys you enter for third-party AI services (e.g., OpenAI, Anthropic). These are stored locally on your device using <code class="text-sky-300 text-xs bg-white/5 px-1.5 py-0.5 rounded">chrome.storage.local</code> and are never transmitted to our servers.</li>
-          <li>License keys issued by our payment processor (Lemon Squeezy) for verifying Pro subscription status.</li>
-          <li>Support communications you send to our email address.</li>
-        </ul>
+        <h3 class="text-base font-semibold text-slate-200 mb-2 mt-5">2.1 Personally Identifiable Information (PII)</h3>
+        <p class="text-slate-400 mb-2">
+          We collect email addresses when users explicitly create accounts via Google Authentication. This data is used to manage account identity, verify Helm Pro license status, and send transactional communications (such as purchase confirmations). Storage occurs on Google Firebase. This information is never sold or shared with advertisers.
+        </p>
 
-        <h3 class="text-base font-semibold text-slate-200 mb-2 mt-5">2.2 Information Collected Automatically</h3>
-        <ul class="list-disc list-outside pl-5 space-y-2 text-slate-400">
-          <li>Workspace preferences (theme, layout, accent color, card style, view density) stored locally via <code class="text-sky-300 text-xs bg-white/5 px-1.5 py-0.5 rounded">chrome.storage.local</code>.</li>
-          <li>Folder and chat metadata you create within Helm (titles, ordering, timestamps) stored locally on your device.</li>
-        </ul>
+        <h3 class="text-base font-semibold text-slate-200 mb-2 mt-5">2.2 Financial and Payment Information</h3>
+        <p class="text-slate-400 mb-2">
+          Purchase status and license type are collected for subscription validation purposes. Helm never directly sees, handles, or stores your credit card numbers or full billing information. Payment processing is handled entirely by our third-party payment processors, and Helm receives only license validation tokens. License status is stored on Firebase; full transaction records remain with the payment processors.
+        </p>
 
-        <h3 class="text-base font-semibold text-slate-200 mb-2 mt-5">2.3 Information We Do NOT Collect</h3>
-        <ul class="list-disc list-outside pl-5 space-y-2 text-slate-400">
-          <li>The content of your AI conversations. Helm does not read, store, or transmit the substance of chats you have with any AI provider.</li>
-          <li>Browsing history beyond what is necessary to display AI provider tabs you have open.</li>
-          <li>Personally identifiable information unless you voluntarily provide it (e.g., when contacting support).</li>
-        </ul>
+        <h3 class="text-base font-semibold text-slate-200 mb-2 mt-5">2.3 Authentication Information</h3>
+        <p class="text-slate-400 mb-2">
+          We collect Google OAuth tokens, which are managed by Firebase Authentication. If you choose to enter API keys for third-party AI services (e.g., OpenAI, Anthropic), those keys are encrypted and stored entirely within your browser's local storage via <code class="text-sky-300 text-xs bg-white/5 px-1.5 py-0.5 rounded">chrome.storage.local</code> — they are never transmitted to our servers.
+        </p>
+
+        <h3 class="text-base font-semibold text-slate-200 mb-2 mt-5">2.4 Personal Communications (Chat Messages)</h3>
+        <p class="text-slate-400 mb-2">
+          Helm reads the content of AI chat conversations locally within your browser in order to enable core features such as organizing conversations into folders, displaying titles, and building your workspace. We do not upload, transmit, or store the body text of your conversations on our servers. This content exists only in temporary browser memory during your active session and is never shared with third parties.
+        </p>
+
+        <h3 class="text-base font-semibold text-slate-200 mb-2 mt-5">2.5 Website Content</h3>
+        <p class="text-slate-400 mb-2">
+          The extension accesses supported AI provider websites (e.g., ChatGPT, Claude.ai, Gemini) to read conversation metadata — including titles, timestamps, and provider names — in order to populate your Helm workspace. Only metadata syncs to the cloud if you explicitly enable that feature; raw conversation content is never transmitted to our servers.
+        </p>
       </section>
 
       <section>
-        <h2 class="text-xl font-semibold text-white mb-3">3. How We Use Your Information</h2>
-        <p class="text-slate-400 mb-3">We use the information we collect or receive to:</p>
-        <ul class="list-disc list-outside pl-5 space-y-2 text-slate-400">
-          <li>Operate and maintain the Helm extension and its features.</li>
-          <li>Verify Pro subscription status by communicating with Lemon Squeezy's license validation API.</li>
-          <li>Respond to your support requests and inquiries.</li>
-          <li>Improve, personalize, and expand our Service.</li>
-          <li>Comply with applicable legal obligations.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="text-xl font-semibold text-white mb-3">4. Payment Processing &amp; Lemon Squeezy</h2>
+        <h2 class="text-xl font-semibold text-white mb-3">3. Data Retention and Deletion</h2>
         <p class="text-slate-400">
-          Helm uses <strong class="text-slate-200">Lemon Squeezy</strong> as its Merchant of Record for all payment processing. When you purchase a Pro subscription or Lifetime Access, you are transacting directly with Lemon Squeezy. Helm does not collect, store, or have access to your payment card details or billing information.
+          You may permanently delete your account and all associated cloud data at any time from the Settings dashboard within the extension. Cloud-stored data (such as folder metadata and account information) is removed within 30 days of account deletion. All locally stored data (preferences, API keys, workspace data) is deleted immediately when you uninstall the Helm extension from Chrome.
         </p>
-        <p class="text-slate-400 mt-3">
-          Lemon Squeezy's privacy practices are governed by their own privacy policy, available at <a href="https://www.lemonsqueezy.com/privacy" target="_blank" rel="noopener" class="text-sky-400 hover:underline">lemonsqueezy.com/privacy</a>. As Merchant of Record, Lemon Squeezy assumes responsibility for the lawful processing of payment transactions, including applicable tax obligations.
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-white mb-3">4. Data Sharing — Third-Party Subprocessors</h2>
+        <p class="text-slate-400 mb-4">
+          We do not sell, rent, or transfer your personal data to any third parties, data brokers, or advertising networks. The only third parties that receive data do so strictly to operate the Service:
         </p>
-        <p class="text-slate-400 mt-3">
-          Purchases are completed inside the Helm extension itself, not on this website.
-        </p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-slate-400 border border-white/10 rounded-xl overflow-hidden">
+            <thead>
+              <tr class="bg-white/5 text-slate-300">
+                <th class="text-left px-4 py-3 font-semibold">Subprocessor</th>
+                <th class="text-left px-4 py-3 font-semibold">Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-t border-white/5">
+                <td class="px-4 py-3">Firebase (Google Cloud)</td>
+                <td class="px-4 py-3">User authentication, cloud sync of folder metadata</td>
+              </tr>
+              <tr class="border-t border-white/5">
+                <td class="px-4 py-3">RevenueCat</td>
+                <td class="px-4 py-3">License and subscription management</td>
+              </tr>
+              <tr class="border-t border-white/5">
+                <td class="px-4 py-3">Stripe</td>
+                <td class="px-4 py-3">Payment processing</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section>
@@ -107,17 +125,7 @@
       </section>
 
       <section>
-        <h2 class="text-xl font-semibold text-white mb-3">6. Local Storage &amp; Data Retention</h2>
-        <p class="text-slate-400">
-          All workspace data (preferences, folders, chat metadata, API keys) is stored exclusively in your browser's local storage via the Chrome Extension Storage API (<code class="text-sky-300 text-xs bg-white/5 px-1.5 py-0.5 rounded">chrome.storage.local</code>). This data resides on your device and is not synchronized to any Helm-operated server unless you explicitly enable a cloud backup feature (if offered in a future release).
-        </p>
-        <p class="text-slate-400 mt-3">
-          You can delete all locally stored data at any time by uninstalling the Helm extension from Chrome.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="text-xl font-semibold text-white mb-3">7. Your Privacy Rights</h2>
+        <h2 class="text-xl font-semibold text-white mb-3">6. Your Privacy Rights</h2>
         <p class="text-slate-400 mb-3">Depending on your location, you may have the following rights:</p>
 
         <h3 class="text-base font-semibold text-slate-200 mb-2">GDPR (EEA / UK Users)</h3>
@@ -144,28 +152,28 @@
       </section>
 
       <section>
-        <h2 class="text-xl font-semibold text-white mb-3">8. Children's Privacy</h2>
+        <h2 class="text-xl font-semibold text-white mb-3">7. Children's Privacy</h2>
         <p class="text-slate-400">
           Helm is not directed at children under the age of 13 (or 16 in the EEA). We do not knowingly collect personal information from children. If you believe a child has provided us personal information, please contact us and we will delete it promptly.
         </p>
       </section>
 
       <section>
-        <h2 class="text-xl font-semibold text-white mb-3">9. Security</h2>
+        <h2 class="text-xl font-semibold text-white mb-3">8. Security</h2>
         <p class="text-slate-400">
           We take reasonable administrative and technical measures to protect your information. However, no method of electronic storage is 100% secure, and we cannot guarantee absolute security. We encourage you to use strong, unique API keys and to keep them confidential.
         </p>
       </section>
 
       <section>
-        <h2 class="text-xl font-semibold text-white mb-3">10. Changes to This Policy</h2>
+        <h2 class="text-xl font-semibold text-white mb-3">9. Changes to This Policy</h2>
         <p class="text-slate-400">
           We may update this Privacy Policy from time to time. We will notify you of material changes by updating the "Last updated" date at the top of this page. Your continued use of Helm after changes become effective constitutes your acceptance of the revised policy.
         </p>
       </section>
 
       <section>
-        <h2 class="text-xl font-semibold text-white mb-3">11. Contact Us</h2>
+        <h2 class="text-xl font-semibold text-white mb-3">10. Contact Us</h2>
         <p class="text-slate-400">
           If you have any questions about this Privacy Policy, your data, or your rights, please contact us:
         </p>
